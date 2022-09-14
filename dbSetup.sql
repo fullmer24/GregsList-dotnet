@@ -29,3 +29,25 @@ VALUES
 
 -- GET ALL CARS
 SELECT * FROM cars;
+
+
+CREATE TABLE houses(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  style VARCHAR(225) NOT NULL,
+  bdrm INT NOT NULL,
+  bath INT NOT NULL,
+  price INT NOT NULL,
+  imgUrl VARCHAR(255) NOT NULL,
+  description VARCHAR(500) NOT NULL
+)default charset utf8;
+
+DROP TABLE houses;
+
+-- NOTE create
+INSERT INTO houses 
+(style, bdrm, bath, price, imgUrl, description)
+VALUES
+("ranch", 4, 2, 5000000, "https://thiscatdoesnotexist.com", "nice ranch house on land");
+
+-- NOTE get all
+SELECT * FROM houses;
